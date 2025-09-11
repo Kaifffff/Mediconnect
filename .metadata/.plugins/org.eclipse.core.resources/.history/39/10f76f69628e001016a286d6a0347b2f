@@ -1,0 +1,5 @@
+package com.kaif.mediConnect.Repo;
+
+public interface PatientRepo {
+
+}

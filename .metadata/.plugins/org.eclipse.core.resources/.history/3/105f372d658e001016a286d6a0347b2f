@@ -1,0 +1,31 @@
+package com.kaif.mediConnect.Dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.kaif.mediConnect.DTO.AppointmentRequest;
+import com.kaif.mediConnect.Model.Appointment;
+import com.kaif.mediConnect.Repo.AppointmentRepo;
+import com.kaif.mediConnect.Service.AppointmentService;
+
+@Service
+public class AppointmentDao implements AppointmentService{
+	
+	@Autowired
+	AppointmentRepo ar;
+
+	@Override
+	public String bookAppointment(AppointmentRequest request) {
+		
+		return null;
+	}
+
+	@Override
+	public List<Appointment> getAllAppointments() {
+	
+		return ar.findAll();
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.kaif.mediConnect.Dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.kaif.mediConnect.Model.Payment;
+import com.kaif.mediConnect.Repo.PaymentRepo;
+import com.kaif.mediConnect.Service.PaymentService;
+
+@Service
+public class PaymentDao implements PaymentService {
+	
+	@Autowired
+	PaymentRepo pr;
+
+	@Override
+	public List<Payment> getAllPayments() {
+	
+		return pr.findAll();
+	}
+
+	@Override
+	public Payment addPayment(Payment payment) {
+		
+		return pr.save(payment);
+	}
+
+}

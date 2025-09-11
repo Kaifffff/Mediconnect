@@ -1,0 +1,28 @@
+package com.kaif.mediConnect.Controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.kaif.mediConnect.DTO.AppointmentRequest;
+import com.kaif.mediConnect.Model.Appointment;
+
+@RestController
+@RequestMapping("/Appointments")
+public class AppointmentController {
+	
+	
+	    @PostMapping("/book")
+	    public String bookAppointment(@RequestBody AppointmentRequest request) {
+	        return null;
+	    }
+
+	    @GetMapping
+	    public List<Appointment> getAllAppointments() {
+	        return null;
+	    }
+}

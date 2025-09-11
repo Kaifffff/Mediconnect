@@ -1,0 +1,5 @@
+package com.kaif.mediConnect.Model;
+
+public class Payment {
+
+}
