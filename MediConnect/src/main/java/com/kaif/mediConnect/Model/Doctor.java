@@ -11,6 +11,7 @@ public class Doctor {
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
 	 private Long id;
 	 private String name;
+	 private String email;
 	 private String specialization;
      private int experience;
      private String availableFrom;
@@ -27,6 +28,12 @@ public class Doctor {
 	 }
 	 public void setName(String name) {
 		 this.name = name;
+	 }
+	 public String getEmail() {
+		 return email;
+	 }
+	 public void setEmail(String email) {
+		 this.email = email;
 	 }
 	 public String getSpecialization() {
 		 return specialization;
@@ -60,10 +67,11 @@ public class Doctor {
 	 }
 	 @Override
 	 public String toString() {
-		return "Doctor [id=" + id + ", name=" + name + ", specialization=" + specialization + ", experience="
-				+ experience + ", availableFrom=" + availableFrom + ", availableTo=" + availableTo
+		return "Doctor [id=" + id + ", name=" + name + ", email=" + email + ", specialization=" + specialization
+				+ ", experience=" + experience + ", availableFrom=" + availableFrom + ", availableTo=" + availableTo
 				+ ", consultationFee=" + consultationFee + "]";
 	 }
+	
      
      
 }
