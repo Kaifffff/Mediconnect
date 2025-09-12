@@ -27,4 +27,9 @@ public class DoctorDao implements DoctorService{
 		return dr.save(doctor);
 	}
 
+	@Override
+	public void del(long id) {
+		dr.deleteById(id);
+	}
+
 }

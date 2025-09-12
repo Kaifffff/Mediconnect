@@ -1,6 +1,7 @@
 import React from 'react'
 import Register from './Register'
 import {BrowserRouter , Routes , Route , Link} from 'react-router-dom'
+import Display from './Display'
 function DashBoard() {
   return (
     <>
@@ -8,9 +9,10 @@ function DashBoard() {
      
      <BrowserRouter>
      <Link to="/Register">Registration </Link>
+     <Link to="/Display">Display </Link>
      <Routes>
-        <Route path="/Register" element={<Register/>}>
-        </Route>
+        <Route path="/Register" element={<Register/>}/>
+        <Route path="/Display" element={<Display/>}/>
      </Routes>
      </BrowserRouter>
 

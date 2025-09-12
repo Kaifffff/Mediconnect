@@ -12,6 +12,7 @@ public class Doctor {
 	 private Long id;
 	 private String name;
 	 private String email;
+	 private String password;
 	 private String specialization;
      private int experience;
      private String availableFrom;
@@ -34,6 +35,12 @@ public class Doctor {
 	 }
 	 public void setEmail(String email) {
 		 this.email = email;
+	 }
+	 public String getPassword() {
+		 return password;
+	 }
+	 public void setPassword(String password) {
+		 this.password = password;
 	 }
 	 public String getSpecialization() {
 		 return specialization;
@@ -67,11 +74,10 @@ public class Doctor {
 	 }
 	 @Override
 	 public String toString() {
-		return "Doctor [id=" + id + ", name=" + name + ", email=" + email + ", specialization=" + specialization
-				+ ", experience=" + experience + ", availableFrom=" + availableFrom + ", availableTo=" + availableTo
-				+ ", consultationFee=" + consultationFee + "]";
+		return "Doctor [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password
+				+ ", specialization=" + specialization + ", experience=" + experience + ", availableFrom="
+				+ availableFrom + ", availableTo=" + availableTo + ", consultationFee=" + consultationFee + "]";
 	 }
-	
-     
+	 
      
 }

@@ -4,6 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.kaif.mediConnect.Model.Appointment;
 
-public interface AppointmentRepo extends JpaRepository<Appointment , Long> {
 
+
+public interface AppointmentRepo extends JpaRepository<Appointment , Long> {
 }
