@@ -1,0 +1,11 @@
+package com.kaif.mediConnect.Service;
+
+import java.util.List;
+
+import com.kaif.mediConnect.Model.Payment;
+
+public interface PaymentService {
+	 public List<Payment> getAllPayments();
+	 
+	 public Payment addPayment(Long appointmentId, Payment payment);
+}

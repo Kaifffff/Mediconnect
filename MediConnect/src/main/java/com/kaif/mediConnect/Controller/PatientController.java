@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -29,6 +31,16 @@ public class PatientController {
 	    @PostMapping
 	    public Patient createPatients(@RequestBody Patient patient) {
 	        return service.createPatients(patient);
+	    }
+	    
+	    @DeleteMapping("/delete")
+	    public String deleteById(@PathVariable Long id){
+	    	return service.deleteById(id);
+	    }
+	    
+	    @DeleteMapping("/deleteAll")
+	    public String deleteAll(){
+	    	return service.deleteAll();
 	    }
 
 }

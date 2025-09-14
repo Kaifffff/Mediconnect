@@ -27,4 +27,18 @@ public class PatientDao implements PatientService {
 		return pr.save(patient);
 	}
 
+	@Override
+	public String deleteById(Long id) {
+		pr.deleteById(id);
+		return "Patient Deleted ";
+	}
+
+	@Override
+	public String deleteAll() {
+		pr.deleteAll();
+		return "All Patient Deleted";
+	}
+	
+	
+
 }

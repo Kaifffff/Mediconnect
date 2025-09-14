@@ -2,6 +2,7 @@ import React from 'react'
 import Register from './Register'
 import {BrowserRouter , Routes , Route , Link} from 'react-router-dom'
 import Display from './Display'
+import Navbar from './Navbar'
 function DashBoard() {
   return (
     <>
@@ -15,8 +16,6 @@ function DashBoard() {
         <Route path="/Display" element={<Display/>}/>
      </Routes>
      </BrowserRouter>
-
-
      </>
    
   )

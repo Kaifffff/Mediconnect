@@ -9,4 +9,7 @@ public interface AppointmentService {
 
 	public String bookAppointment(AppointmentRequest request);
 	public List<Appointment> getAllAppointments();
+	public String deleteByDoctorId(Long id);
+	public String deleteAllAppointments();
+	public String deleteByPatientId(Long id);
 }

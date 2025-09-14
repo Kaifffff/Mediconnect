@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kaif.mediConnect.Model.Doctor;
+import com.kaif.mediConnect.Repo.AppointmentRepo;
 import com.kaif.mediConnect.Repo.DoctorRepo;
 import com.kaif.mediConnect.Service.DoctorService;
 
@@ -14,6 +15,8 @@ public class DoctorDao implements DoctorService{
 
 	@Autowired
 	DoctorRepo dr;
+	@Autowired
+	AppointmentRepo ar;
 	
 	@Override
 	public List<Doctor> getAllDoctors() {
@@ -28,8 +31,14 @@ public class DoctorDao implements DoctorService{
 	}
 
 	@Override
-	public void del(long id) {
+	public void del(Long id) {
 		dr.deleteById(id);
+	}
+
+	@Override
+	public String deleteAllDoctor() {
+		dr.deleteAll();
+		return "All Doctors Deleted";
 	}
 
 }

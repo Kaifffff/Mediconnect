@@ -31,8 +31,27 @@ public class PaymentDao implements PaymentService {
 	    Appointment appointment = ar.findById(appointmentId)
 	        .orElseThrow(() -> new RuntimeException("Appointment not found"));
 	    payment.setAppointment(appointment);
-	    payment.setStatus("Successful"); // Example logic
+	    payment.setStatus("Successful"); 
 	    return pr.save(payment);
 	}
+
+	@Override
+	public String deletePayment(Long id) {
+		pr.deleteById(id);
+		return "deleted";
+	}
+	@Override
+	public String deleteAllPayments() {
+		pr.deleteAll();
+		return "All Payments Deleted";
+	}
+
+	@Override
+	public String deleteByAppointmentId(Long id) {
+	    pr.deleteByAppointment_Id(id);
+		return "Payments Delete By Appointment Id";
+	}
+	
+	
 
 }

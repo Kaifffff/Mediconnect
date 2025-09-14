@@ -34,8 +34,13 @@ public class DoctorController {
 	    }
 	    
 	    @DeleteMapping("/Delete/{id}")
-	    public String delete(@PathVariable long id) {
+	    public String delete(@PathVariable Long id) {
 	    	service.del(id);
 	    	return "Deleted";
+	    }
+	    
+	    @DeleteMapping("/DeleteAll")
+	    public String deleteAllDoctors() {
+	    	return service.deleteAllDoctor();
 	    }
 }

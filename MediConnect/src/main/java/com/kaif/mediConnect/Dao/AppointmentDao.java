@@ -15,6 +15,8 @@ import com.kaif.mediConnect.Repo.DoctorRepo;
 import com.kaif.mediConnect.Repo.PatientRepo;
 import com.kaif.mediConnect.Service.AppointmentService;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class AppointmentDao implements AppointmentService{
 	
@@ -64,6 +66,29 @@ public class AppointmentDao implements AppointmentService{
 	public List<Appointment> getAllAppointments() {
 	
 		return ar.findAll();
+	}
+
+
+	@Override
+	@Transactional
+	public String deleteByDoctorId(Long id) {
+		ar.deleteByDoctor_Id(id);
+		return "Appointment Deleted by Doctor Id";
+	}
+
+
+	@Override
+	public String deleteAllAppointments() {
+		ar.deleteAll();
+		return "All Appointments Deleted";
+	}
+
+
+	@Override
+	@Transactional
+	public String deleteByPatientId(Long id) {
+		ar.deleteByPatient_Id(id);
+		return "Appointment Delete By Patient Id";
 	}
 
 }

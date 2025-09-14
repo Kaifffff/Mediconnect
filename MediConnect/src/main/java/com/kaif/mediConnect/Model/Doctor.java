@@ -9,7 +9,7 @@ import jakarta.persistence.Id;
 public class Doctor {
 	 @Id
 	 @GeneratedValue(strategy = GenerationType.IDENTITY)
-	 private Long id;
+	 private Long Id;
 	 private String name;
 	 private String email;
 	 private String password;
@@ -19,10 +19,10 @@ public class Doctor {
      private String availableTo;
      private double consultationFee;
 	 public Long getId() {
-		 return id;
+		 return Id;
 	 }
 	 public void setId(Long id) {
-		 this.id = id;
+		 Id = id;
 	 }
 	 public String getName() {
 		 return name;
@@ -74,10 +74,13 @@ public class Doctor {
 	 }
 	 @Override
 	 public String toString() {
-		return "Doctor [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password
+		return "Doctor [Id=" + Id + ", name=" + name + ", email=" + email + ", password=" + password
 				+ ", specialization=" + specialization + ", experience=" + experience + ", availableFrom="
 				+ availableFrom + ", availableTo=" + availableTo + ", consultationFee=" + consultationFee + "]";
 	 }
+
+	
+	
 	 
      
 }

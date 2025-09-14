@@ -1,0 +1,30 @@
+package com.kaif.mediConnect.Dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.kaif.mediConnect.Model.Patient;
+import com.kaif.mediConnect.Repo.PatientRepo;
+import com.kaif.mediConnect.Service.PatientService;
+
+@Service
+public class PatientDao implements PatientService {
+	
+	@Autowired
+	PatientRepo pr;
+
+	@Override
+	public List<Patient> getAllPatients() {
+		
+		return pr.findAll();
+	}
+
+	@Override
+	public Patient createPatients(Patient patient) {
+		
+		return pr.save(patient);
+	}
+
+}

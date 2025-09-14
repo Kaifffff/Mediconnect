@@ -1,0 +1,14 @@
+package com.kaif.mediConnect.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.kaif.mediConnect.Model.Appointment;
+
+
+
+public interface AppointmentRepo extends JpaRepository<Appointment , Long> {
+	void deleteByDoctor_Id(Long id);
+	void deleteByPatient_Id(Long id);
+	void findByDoctor_Id(Long id);
+}
+

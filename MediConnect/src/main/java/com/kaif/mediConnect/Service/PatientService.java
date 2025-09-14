@@ -6,5 +6,7 @@ import com.kaif.mediConnect.Model.Patient;
 
 public interface PatientService {
 	public List<Patient> getAllPatients() ;
-	public Patient createPatients(Patient patient); 
+	public Patient createPatients(Patient patient);
+	public String deleteById(Long id);
+	public String deleteAll(); 
 }

@@ -8,4 +8,10 @@ public interface PaymentService {
 	 public List<Payment> getAllPayments();
 	 
 	 public Payment addPayment(Long appointmentId, Payment payment);
+
+	 public String deletePayment(Long id);
+
+	 public String deleteAllPayments();
+
+	 public String deleteByAppointmentId(Long id);
 }

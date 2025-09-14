@@ -1,13 +1,17 @@
 import DashBoard from "./components/DashBoard"
+import Home from "./components/Home"
+import Navbar from "./components/Navbar"
 import Register from "./components/Register"
 
 
 function App() {
   return (
    <>
-   <DashBoard/>
+   <Navbar/>
+   <Home/>
+
    </>
-  )
+  );
 }
 
 export default App

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,7 +19,7 @@ import com.kaif.mediConnect.Service.PaymentService;
 @RequestMapping("/Payments")
 @CrossOrigin(origins = "http://localhost:5173") 
 public class PaymentController {
-	
+
 	   @Autowired 
 	   PaymentService service;
 	   @GetMapping
@@ -29,5 +30,20 @@ public class PaymentController {
 	    @PostMapping("/{appointmentId}")
 	    public Payment addPayment(@PathVariable Long appointmentId ,@RequestBody Payment payment) {
 	        return service.addPayment(appointmentId, payment);
+	    }
+	    
+	    @DeleteMapping("/delete/{id}")
+	    public String delete(@PathVariable Long id) {
+	    	return service.deletePayment(id);
+	    }
+	    
+	    @DeleteMapping("/deleteByAppointmentId/{id}")
+	    public String deleteByAppointmentId(@PathVariable Long id) {
+	    	return service.deleteByAppointmentId(id);
+	    }
+	    
+	    @DeleteMapping("/deleteAll")
+	    public String deleteAll() {
+	    	return service.deleteAllPayments();
 	    }
 }

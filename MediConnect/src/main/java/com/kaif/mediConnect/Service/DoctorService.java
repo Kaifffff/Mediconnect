@@ -7,5 +7,6 @@ import com.kaif.mediConnect.Model.Doctor;
 public interface DoctorService {
 	public List<Doctor> getAllDoctors();
 	public Doctor createDoctor(Doctor doctor);
-	public void del(long id);
+	public void del(Long id);
+	public String deleteAllDoctor();
 }
