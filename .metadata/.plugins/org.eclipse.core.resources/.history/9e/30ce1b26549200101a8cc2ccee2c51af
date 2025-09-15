@@ -1,0 +1,9 @@
+package com.kaif.mediConnect.Repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.kaif.mediConnect.Model.Doctor;
+
+public interface DoctorRepo extends JpaRepository<Doctor , Long>{
+
+}

@@ -1,0 +1,18 @@
+package com.kaif.mediConnect.Service;
+
+import java.util.List;
+
+import com.kaif.mediConnect.DTO.AppointmentRequest;
+import com.kaif.mediConnect.Model.Appointment;
+
+public interface AppointmentService {
+
+	public String bookAppointment(AppointmentRequest request);
+	public List<Appointment> getAllAppointments();
+	public String deleteByDoctorId(Long id);
+	public String deleteAllAppointments();
+	public String deleteByPatientId(Long id);
+	public Appointment getAppointmentById(Long id);
+	public Appointment getAppointmentByPatientId(Long id);
+	public List<Appointment> getAppointmentByDoctorId(Long id);
+}

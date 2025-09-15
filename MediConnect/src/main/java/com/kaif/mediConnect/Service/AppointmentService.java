@@ -12,4 +12,7 @@ public interface AppointmentService {
 	public String deleteByDoctorId(Long id);
 	public String deleteAllAppointments();
 	public String deleteByPatientId(Long id);
+	public Appointment getAppointmentById(Long id);
+	public List<Appointment> getAppointmentByPatientId(Long id);
+	public List<Appointment> getAppointmentByDoctorId(Long id);
 }

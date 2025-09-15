@@ -13,6 +13,7 @@ public class Patient {
 
 	    private String name;
 	    private String email;
+	    private String password;
 	    private String address;
 	    private String dateOfBirth;
 	    private String gender;
@@ -34,6 +35,12 @@ public class Patient {
 		}
 		public void setEmail(String email) {
 			this.email = email;
+		}
+		public String getPassword() {
+			return password;
+		}
+		public void setPassword(String password) {
+			this.password = password;
 		}
 		public String getAddress() {
 			return address;
@@ -61,10 +68,13 @@ public class Patient {
 		}
 		@Override
 		public String toString() {
-			return "Patient [id=" + id + ", name=" + name + ", email=" + email + ", address=" + address
-					+ ", dateOfBirth=" + dateOfBirth + ", gender=" + gender + ", medicalHistory=" + medicalHistory
-					+ "]";
+			return "Patient [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", address="
+					+ address + ", dateOfBirth=" + dateOfBirth + ", gender=" + gender + ", medicalHistory="
+					+ medicalHistory + "]";
 		}
+		
+	    
+	    
 		
 	    
 }

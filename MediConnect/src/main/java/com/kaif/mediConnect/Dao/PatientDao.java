@@ -38,6 +38,18 @@ public class PatientDao implements PatientService {
 		pr.deleteAll();
 		return "All Patient Deleted";
 	}
+
+	@Override
+	public Patient getById(Long id) {
+		
+		return pr.findById(id).orElse(null);
+	}
+
+	@Override
+	public Patient getByEmailAndPassword(String email, String password) {
+		
+		return pr.findByEmailAndPassword(email, password);
+	}
 	
 	
 

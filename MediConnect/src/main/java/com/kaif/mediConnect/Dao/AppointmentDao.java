@@ -91,4 +91,25 @@ public class AppointmentDao implements AppointmentService{
 		return "Appointment Delete By Patient Id";
 	}
 
+
+	@Override
+	public Appointment getAppointmentById(Long id) {
+		
+		return ar.findById(id).orElse(null);
+	}
+
+
+	@Override
+	public List<Appointment> getAppointmentByPatientId(Long id) {
+		
+		return ar.findByPatient_Id(id);
+	}
+
+
+	@Override
+	public List<Appointment> getAppointmentByDoctorId(Long id) {
+		
+		return ar.findByDoctor_Id(id);
+	}
+
 }

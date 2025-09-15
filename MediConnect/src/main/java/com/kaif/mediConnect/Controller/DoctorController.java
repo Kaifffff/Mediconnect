@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.kaif.mediConnect.Model.Doctor;
@@ -22,23 +23,42 @@ public class DoctorController {
 	
 	    @Autowired
 	    DoctorService service;
-	
+	    
+	    //Fetch All Doctors
 	    @GetMapping
 	    public List<Doctor> getAllDoctors() {
 	        return service.getAllDoctors();
 	    }
+	    
+	    
+	    //Fetch By Doctor Email And Password
+	    @GetMapping("/getByEmailAndPassword/")
+	    public Doctor getByEmailAndPassword(@RequestParam String email,@RequestParam String password) {
+	    	return service.getByEmailAndPassword(email,password);
+	    }
+	    
+	    
+	    //Search By Doctor Name 
+	    @GetMapping("/search")
+	    public List<Doctor> searchProducts(@RequestParam String keyword) {
+	        return service.earchProducts(keyword);
+	    }
 
+	    //Register new Doctor
 	    @PostMapping
 	    public Doctor createDoctor(@RequestBody Doctor doctor) {
 	        return service.createDoctor(doctor);
 	    }
 	    
+	    
+	    //Delete Doctor By Doctor Id
 	    @DeleteMapping("/Delete/{id}")
 	    public String delete(@PathVariable Long id) {
 	    	service.del(id);
 	    	return "Deleted";
 	    }
 	    
+	    //Delete All Doctors 
 	    @DeleteMapping("/DeleteAll")
 	    public String deleteAllDoctors() {
 	    	return service.deleteAllDoctor();

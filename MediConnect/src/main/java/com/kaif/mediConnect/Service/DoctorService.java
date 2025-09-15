@@ -9,4 +9,6 @@ public interface DoctorService {
 	public Doctor createDoctor(Doctor doctor);
 	public void del(Long id);
 	public String deleteAllDoctor();
+	public Doctor getByEmailAndPassword(String email, String password);
+	public List<Doctor> earchProducts(String keyword);
 }

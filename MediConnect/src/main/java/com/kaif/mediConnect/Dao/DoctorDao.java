@@ -41,4 +41,15 @@ public class DoctorDao implements DoctorService{
 		return "All Doctors Deleted";
 	}
 
+	@Override
+	public Doctor getByEmailAndPassword(String email, String password) {
+		
+		return dr.findByEmailAndPassword(email,password);
+	}
+
+	@Override
+	public List<Doctor> earchProducts(String keyword) {
+		
+		return dr.findByNameContainingIgnoreCase(keyword);
+	}
 }
