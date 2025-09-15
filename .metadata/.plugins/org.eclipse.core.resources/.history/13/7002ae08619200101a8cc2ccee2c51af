@@ -39,17 +39,10 @@ public class DoctorController {
 	    
 	    
 	    //Search By Doctor Name 
-	    @GetMapping("/searchName")
-	    public List<Doctor> searchDoctorByName(@RequestParam String keyword) {
-	        return service.searchDoctorByName(keyword);
+	    @GetMapping("/search")
+	    public List<Doctor> searchProducts(@RequestParam String keyword) {
+	        return service.earchProducts(keyword);
 	    }
-	    
-	    //Search Doctor By Specialization 
-	    @GetMapping("/searchSpecialization")
-	    public List<Doctor> searchDoctorByspecializatio(@RequestParam String keyword) {
-	        return service.searchDoctorByspecializatio(keyword);
-	    }
-
 
 	    //Register new Doctor
 	    @PostMapping

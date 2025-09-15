@@ -11,5 +11,4 @@ public interface DoctorService {
 	public String deleteAllDoctor();
 	public Doctor getByEmailAndPassword(String email, String password);
 	public List<Doctor> searchDoctorByName(String keyword);
-	public List<Doctor> searchDoctorByspecializatio(String keyword);
 }

@@ -48,14 +48,8 @@ public class DoctorDao implements DoctorService{
 	}
 
 	@Override
-	public List<Doctor> searchDoctorByName(String keyword) {
+	public List<Doctor> earchProducts(String keyword) {
 		
 		return dr.findByNameContainingIgnoreCase(keyword);
-	}
-
-	@Override
-	public List<Doctor> searchDoctorByspecializatio(String keyword) {
-		
-		return dr.findBySpecializationContainingIgnoreCase(keyword);
 	}
 }

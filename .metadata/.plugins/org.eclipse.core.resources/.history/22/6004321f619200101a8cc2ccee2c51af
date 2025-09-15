@@ -10,6 +10,5 @@ public interface DoctorService {
 	public void del(Long id);
 	public String deleteAllDoctor();
 	public Doctor getByEmailAndPassword(String email, String password);
-	public List<Doctor> searchDoctorByName(String keyword);
-	public List<Doctor> searchDoctorByspecializatio(String keyword);
+	public List<Doctor> earchProducts(String keyword);
 }

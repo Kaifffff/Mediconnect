@@ -52,10 +52,4 @@ public class DoctorDao implements DoctorService{
 		
 		return dr.findByNameContainingIgnoreCase(keyword);
 	}
-
-	@Override
-	public List<Doctor> searchDoctorByspecializatio(String keyword) {
-		
-		return dr.findBySpecializationContainingIgnoreCase(keyword);
-	}
 }
